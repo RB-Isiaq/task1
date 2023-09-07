@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Personal Details</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <img
+          src="/assets/myself.png"
+          alt="Isiaq Ridwan Bukola"
+          data-testid="slackDisplayImage"
+        />
+      </div>
+      <h1>
+        Hi, I'm <span data-testid="slackUserName">Isiaq, Ridwan Bukola</span>
+      </h1>
+      <h2>A <span data-testid="myTrack">Frontend</span> Developer</h2>
+      <p>
+        I am a highly motivated and enthusiastic frontend developer with passion
+        for creating visually appealing websites and web applications.
+      </p>
+      <h3>A breif look into the day</h3>
+      <p>
+        Today is
+        <span data-testid="currentDayofTheWeek" id="currentDayofTheWeek"></span
+        >, the <span id="dayId"></span>th day of the week.
+      </p>
+      <p>
+        The time says <span data-testid="currentUTCTime" id="timeId"></span>
+      </p>
+      <p>
+        Here's the link to
+        <a href="https://github.com/rb-isiaq/task1">my github</a> repo
+      </p>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
