@@ -1,22 +1,25 @@
 const dayElement = document.getElementById("currentDayofTheWeek");
 const dayId = document.getElementById("dayId");
 const timeId = document.getElementById("timeId");
-const date = new Date();
-const day = date.getDay();
-const currentUTCTime = date.toUTCString();
 
-const daysOfTheWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+const updateUTCTimeAndDay = () => {
+  const currentTimeUTC = new Date().toUTCString();
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const date = new Date().getDay();
+  const currentDayOfTheWeek = daysOfWeek[date];
 
-// console.log(date.toString());
-console.log(date);
-dayElement.textContent = daysOfTheWeek[day];
-dayId.textContent = day + 1;
-timeId.textContent = currentUTCTime;
+  timeId.textContent = currentTimeUTC;
+  dayElement.textContent = currentDayOfTheWeek;
+  dayId.textContent = date + 1;
+};
+
+updateUTCTimeAndDay();
+setInterval(updateUTCTimeAndDay, 1000);
